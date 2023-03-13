@@ -4,10 +4,9 @@ import styles from './ProductsList.module.css'
 import OneProduct from '../oneProduct/OneProduct'
 
 
-
 const ProductsList = () => {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState({products:[]})
 
   const getProducts = () => {
     productsService().then((res) => {
@@ -19,6 +18,7 @@ const ProductsList = () => {
     getProducts()
   }, [])
 
+
   console.log(products)
 
   return (
@@ -27,6 +27,7 @@ const ProductsList = () => {
         <OneProduct items={products}/>
     </div>
   )
+  
 }
 
 export default ProductsList

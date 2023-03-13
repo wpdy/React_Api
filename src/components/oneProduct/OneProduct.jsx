@@ -2,10 +2,12 @@ import styles from './OneProduct.module.css'
 
 const OneProduct = (props) => {
 
+  // console.log(props)
+
   return (
     <div className={styles.products_list}>
       {
-        props.items.products?.map(item =>{
+        props.items.products.map(item =>{
           return(
             <div key={item.id} className={styles.one_item}>
               <h1 className={styles.title}>Title: {item.title}</h1>
